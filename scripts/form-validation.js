@@ -35,6 +35,17 @@ function checkMissing() {
     }
     return missing;
 }
+function validateForm(event) {
+    var missing = checkMissing();
+    var emailOk = validateEmail();
+
+    // Stop submission if anything failed
+    if (missing > 0 || emailOk === false) {
+        event.preventDefault();
+    }
+}
+
+document.querySelector("form").addEventListener("submit", validateForm);
 document.querySelector("form").addEventListener("submit", function(event) {
     var missing = checkMissing();
 
