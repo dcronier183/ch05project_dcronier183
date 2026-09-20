@@ -41,6 +41,8 @@ function validateForm(event) {
 
     if (missing === 0 && emailOk === true) {
         document.querySelector("form").submit();
+    } else {
+        alert("Please complete all required fields and make sure your email is at least 8 characters.");
     }
 }
 
