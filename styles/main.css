@@ -1,1 +1,4 @@
 /* main stylesheet */
+.required {
+    border: 2px solid red;
+}
