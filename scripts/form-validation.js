@@ -3,9 +3,13 @@ function checkMissing() {
     function validateEmail() {
     var email = document.getElementById("email");
 
-    // Check the number of characters typed
     if (email.value.length < 8) {
+        email.classList.add("invalid");
         return false;
+    }
+
+    email.classList.remove("invalid");
+    return true;
     }
 
     return true;
