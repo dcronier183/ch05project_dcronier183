@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <Validating HTML Forms with JavaScript>Index</Validating HTML Forms with JavaScript>
 <link rel="stylesheet" href="styles/main.css">
+<script src="scripts/form-validation.js"></script>
 </head>
 <body>
 <Validating HTML Forms with JavaScript>Home</Validating HTML Forms with JavaScript>
@@ -15,6 +16,28 @@
 <li><a href="#">Contact</a></li>
 </ul>
 </nav>
+
+  <main>
+<h2>Contact Form</h2>
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" class="required" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" class="required" required>
+
+    <label for="topic">Topic:</label>
+    <select id="topic" name="topic" class="required" required>
+        <option value="">Choose one</option>
+        <option value="general">General question</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+
+</main>
   
 </body>
 </html>
