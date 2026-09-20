@@ -1,8 +1,10 @@
 /* main stylesheet */
+
 .required {
     border: 2px solid gold;
+}
+
 input.invalid {
     border: 3px solid red;
     background-color: #ffe6e6;
-}
 }
