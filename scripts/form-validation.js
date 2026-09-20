@@ -39,9 +39,8 @@ function validateForm(event) {
     var missing = checkMissing();
     var emailOk = validateEmail();
 
-    // Stop submission if anything failed
-    if (missing > 0 || emailOk === false) {
-        event.preventDefault();
+    if (missing === 0 && emailOk === true) {
+        document.querySelector("form").submit();
     }
 }
 
