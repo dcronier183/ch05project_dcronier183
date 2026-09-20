@@ -1,5 +1,15 @@
 // form validation
 function checkMissing() {
+    function validateEmail() {
+    var email = document.getElementById("email");
+
+    // Check the number of characters typed
+    if (email.value.length < 8) {
+        return false;
+    }
+
+    return true;
+}
     // find every field with required class
     var fields = document.querySelectorAll(".required");
     var missing = 0;
@@ -19,4 +29,13 @@ function checkMissing() {
     } else {
         span.textContent = "All required fields are complete.";
     }
+    return missing;
 }
+document.querySelector("form").addEventListener("submit", function(event) {
+    var missing = checkMissing();
+
+    //stops the form from submitting if is empty
+    if (missing > 0) {
+        event.preventDefault();
+    }
+});
