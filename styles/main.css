@@ -1,4 +1,8 @@
 /* main stylesheet */
 .required {
-    border: 2px solid red;
+    border: 2px solid gold;
+.invalid {
+    border: 3px solid red;
+    background-color: #ffe6e6;
+}
 }
